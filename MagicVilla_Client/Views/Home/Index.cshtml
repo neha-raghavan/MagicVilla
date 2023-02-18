@@ -1,0 +1,43 @@
+﻿@using System.Data
+@model DataTable
+
+
+
+<br />
+<br />
+<table class="table">
+    <tdead>
+      
+    </tdead>
+    <tbody>
+        @foreach (DataRow item in Model.Rows)
+        {
+            <tr>
+                <div class="card">
+                    <div class="row align-items-start">
+                        <div class="col-4">
+                    <img class="card-img-top" src="@item["ImageUrl"]" alt="Card image cap" style="width: 18rem;">
+                    </div>
+                        <div class="col-4">
+                    <h4 class="card-title">@item["Name"]</h4>
+                    <p class="card-text">
+                        @item["Details"]
+                    </p>
+                     <h6 class="card-text">
+                      Rate      @item["Rate"]
+                            </h6> <h6 class="card-text">
+                      Sqft      @item["Sqft"]
+                        </h6> <h6 class="card-text">
+                     Occupancy       @item["Occupancy"]
+                    </h6>
+                        </div>
+                        </div>
+                            </div>
+           
+            </tr>
+
+            
+           
+        }
+    </tbody>
+</table>
